@@ -15,4 +15,16 @@ class IuguAdapter
       card_display_number: payment_method.data["display_number"]
     }
   end
+
+  def self.create_charge(email, payment_method_id, price)
+    charge = Iugu::Charge.create(
+      email: email,
+      customer_payment_method_id: payment_method_id,
+      items: [{
+        description: "Item Um",
+        quantity: "1",
+        price_cents: (price * 100).to_i}])
+
+    charge.invoice_id
+  end
 end

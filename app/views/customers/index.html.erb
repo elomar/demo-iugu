@@ -7,7 +7,7 @@
       <th>Iugu client</th>
       <th>Iugu payment method</th>
       <th>Card display number</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -18,6 +18,7 @@
         <td><%= customer.iugu_client_id %></td>
         <td><%= customer.iugu_payment_method_id %></td>
         <td><%= customer.card_display_number %></td>
+        <td><%= link_to 'Charge', customer_payments_path(customer), method: :post %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

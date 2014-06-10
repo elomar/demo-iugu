@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_id: 
+  iugu_invoice_id: MyString
+  value: 
+  value: 
+
+two:
+  customer_id: 
+  iugu_invoice_id: MyString
+  value: 
+  value: 
