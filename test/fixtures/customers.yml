@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  iugu_client_id: MyString
+  iugu_payment_method_id: MyString
+  card_display_number: MyString
+
+two:
+  email: MyString
+  iugu_client_id: MyString
+  iugu_payment_method_id: MyString
+  card_display_number: MyString

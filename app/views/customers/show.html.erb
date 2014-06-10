@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Iugu client:</strong>
+  <%= @customer.iugu_client_id %>
+</p>
+
+<p>
+  <strong>Iugu payment method:</strong>
+  <%= @customer.iugu_payment_method_id %>
+</p>
+
+<p>
+  <strong>Card display number:</strong>
+  <%= @customer.card_display_number %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>
