@@ -1,30 +1,9 @@
 <h1>New customer</h1>
 
-<script type="text/javascript">
-  Iugu.setAccountID("<%= Rails.application.secrets.iugu_app_id %>");
-  Iugu.setTestMode(true);
-
-  jQuery(function($) {
-    $('#new_customer').submit(function(evt) {
-        var form = $(this);
-        var tokenResponseHandler = function(data) {
-            if (data.errors) {
-                console.log(data.errors);
-                alert("Erro salvando cartão: " + JSON.stringify(data.errors));
-            } else {
-                $("#token").val(data.id);
-                form.get(0).submit();
-            }
-        }
-        
-        Iugu.createPaymentToken($("#payment-form").get(0), tokenResponseHandler);
-        return false;
-    });
-  });
-</script>
-
 <%= render 'iugu_form' %>
 
 <%= render 'form' %>
 
 <%= link_to 'Back', customers_path %>
+
+<%= javascript_include_tag 'iugu_token' %>
