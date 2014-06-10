@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'iugu', '~> 1.0'
+
+group :development do
+  gem 'binding_of_caller'
+  gem 'better_errors'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'

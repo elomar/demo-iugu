@@ -24,7 +24,9 @@ class CustomersController < ApplicationController
   # POST /customers
   # POST /customers.json
   def create
-    @customer = Customer.new(customer_params)
+    payment_params = IuguAdapter.create_customer_from_token(customer_params[:email], params[:token])
+
+    @customer = Customer.new(customer_params.merge(payment_params))
 
     respond_to do |format|
       if @customer.save
